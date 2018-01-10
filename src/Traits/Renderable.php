@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Traits;
+namespace SertxuDeveloper\Voyager\Traits;
 
 use Illuminate\View\View;
 

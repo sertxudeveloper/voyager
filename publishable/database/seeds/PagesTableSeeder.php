@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Page;
+use SertxuDeveloper\Voyager\Models\Page;
 
 class PagesTableSeeder extends Seeder
 {

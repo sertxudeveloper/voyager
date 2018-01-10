@@ -1,23 +1,23 @@
 <?php
 
-namespace TCG\Voyager\Http\Controllers;
+namespace SertxuDeveloper\Voyager\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use TCG\Voyager\Database\DatabaseUpdater;
-use TCG\Voyager\Database\Schema\Column;
-use TCG\Voyager\Database\Schema\Identifier;
-use TCG\Voyager\Database\Schema\SchemaManager;
-use TCG\Voyager\Database\Schema\Table;
-use TCG\Voyager\Database\Types\Type;
-use TCG\Voyager\Events\TableAdded;
-use TCG\Voyager\Events\TableDeleted;
-use TCG\Voyager\Events\TableUpdated;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\DataType;
+use SertxuDeveloper\Voyager\Database\DatabaseUpdater;
+use SertxuDeveloper\Voyager\Database\Schema\Column;
+use SertxuDeveloper\Voyager\Database\Schema\Identifier;
+use SertxuDeveloper\Voyager\Database\Schema\SchemaManager;
+use SertxuDeveloper\Voyager\Database\Schema\Table;
+use SertxuDeveloper\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Events\TableAdded;
+use SertxuDeveloper\Voyager\Events\TableDeleted;
+use SertxuDeveloper\Voyager\Events\TableUpdated;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Models\DataType;
 
 class VoyagerDatabaseController extends Controller
 {

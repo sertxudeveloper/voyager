@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Database\Types\Mysql;
+namespace SertxuDeveloper\Voyager\Database\Types\Mysql;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use TCG\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Database\Types\Type;
 
 class TinyTextType extends Type
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Traits\Resizable;
-use TCG\Voyager\Traits\Translatable;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Traits\Resizable;
+use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Post extends Model
 {

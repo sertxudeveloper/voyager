@@ -1,13 +1,13 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Doctrine\DBAL\Schema\SchemaException;
 use Illuminate\Support\Facades\Auth;
-use TCG\Voyager\Database\Schema\SchemaManager;
-use TCG\Voyager\Database\Schema\Table;
-use TCG\Voyager\Database\Types\Type;
-use TCG\Voyager\Traits\AlertsMessages;
+use SertxuDeveloper\Voyager\Database\Schema\SchemaManager;
+use SertxuDeveloper\Voyager\Database\Schema\Table;
+use SertxuDeveloper\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Traits\AlertsMessages;
 
 class DatabaseTest extends TestCase
 {

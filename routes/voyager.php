@@ -1,8 +1,8 @@
 <?php
 
-use TCG\Voyager\Events\Routing;
-use TCG\Voyager\Events\RoutingAdmin;
-use TCG\Voyager\Models\DataType;
+use SertxuDeveloper\Voyager\Events\Routing;
+use SertxuDeveloper\Voyager\Events\RoutingAdmin;
+use SertxuDeveloper\Voyager\Models\DataType;
 
 /*
 |--------------------------------------------------------------------------

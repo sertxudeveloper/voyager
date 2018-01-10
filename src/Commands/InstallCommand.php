@@ -1,14 +1,14 @@
 <?php
 
-namespace TCG\Voyager\Commands;
+namespace SertxuDeveloper\Voyager\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Intervention\Image\ImageServiceProviderLaravel5;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Process\Process;
-use TCG\Voyager\Traits\Seedable;
-use TCG\Voyager\VoyagerServiceProvider;
+use SertxuDeveloper\Voyager\Traits\Seedable;
+use SertxuDeveloper\Voyager\VoyagerServiceProvider;
 
 class InstallCommand extends Command
 {
@@ -80,13 +80,13 @@ class InstallCommand extends Command
             $str = file_get_contents(app_path('User.php'));
 
             if ($str !== false) {
-                $str = str_replace('extends Authenticatable', "extends \TCG\Voyager\Models\User", $str);
+                $str = str_replace('extends Authenticatable', "extends \SertxuDeveloper\Voyager\Models\User", $str);
 
                 file_put_contents(app_path('User.php'), $str);
             }
         } else {
             $this->warn('Unable to locate "app/User.php".  Did you move this file?');
-            $this->warn('You will need to update this manually.  Change "extends Authenticatable" to "extends \TCG\Voyager\Models\User" in your User model');
+            $this->warn('You will need to update this manually.  Change "extends Authenticatable" to "extends \SertxuDeveloper\Voyager\Models\User" in your User model');
         }
 
         $this->info('Dumping the autoloaded files and reloading all new files');

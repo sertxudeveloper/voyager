@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use TCG\Voyager\Events\MenuDisplay;
-use TCG\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Events\MenuDisplay;
+use SertxuDeveloper\Voyager\Facades\Voyager;
 
 /**
  * @todo: Refactor this class by using something like MenuBuilder Helper.

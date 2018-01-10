@@ -1,10 +1,10 @@
 <?php
 
-namespace TCG\Voyager\Widgets;
+namespace SertxuDeveloper\Voyager\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Str;
-use TCG\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Facades\Voyager;
 
 class UserDimmer extends AbstractWidget
 {

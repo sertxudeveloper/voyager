@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Events;
+namespace SertxuDeveloper\Voyager\Events;
 
 use Illuminate\Queue\SerializesModels;
-use TCG\Voyager\Models\DataType;
+use SertxuDeveloper\Voyager\Models\DataType;
 
 class BreadDataDeleted
 {

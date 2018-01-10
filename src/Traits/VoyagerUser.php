@@ -1,10 +1,10 @@
 <?php
 
-namespace TCG\Voyager\Traits;
+namespace SertxuDeveloper\Voyager\Traits;
 
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\Role;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Models\Role;
 
 /**
  * @property  \Illuminate\Database\Eloquent\Collection  roles

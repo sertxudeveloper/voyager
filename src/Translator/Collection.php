@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Translator;
+namespace SertxuDeveloper\Voyager\Translator;
 
 use Illuminate\Support\Collection as IlluminateCollection;
 

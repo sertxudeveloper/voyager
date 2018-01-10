@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Menu;
-use TCG\Voyager\Models\MenuItem;
+use SertxuDeveloper\Voyager\Models\Menu;
+use SertxuDeveloper\Voyager\Models\MenuItem;
 
 class MenuItemsTableSeeder extends Seeder
 {

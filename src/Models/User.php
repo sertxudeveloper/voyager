@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace SertxuDeveloper\Voyager\Models;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use TCG\Voyager\Contracts\User as UserContract;
-use TCG\Voyager\Traits\VoyagerUser;
+use SertxuDeveloper\Voyager\Contracts\User as UserContract;
+use SertxuDeveloper\Voyager\Traits\VoyagerUser;
 
 class User extends Authenticatable implements UserContract
 {

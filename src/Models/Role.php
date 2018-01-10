@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use TCG\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Facades\Voyager;
 
 class Role extends Model
 {

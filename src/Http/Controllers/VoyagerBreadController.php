@@ -1,22 +1,22 @@
 <?php
 
-namespace TCG\Voyager\Http\Controllers;
+namespace SertxuDeveloper\Voyager\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use TCG\Voyager\Database\Schema\Column;
-use TCG\Voyager\Database\Schema\SchemaManager;
-use TCG\Voyager\Database\Schema\Table;
-use TCG\Voyager\Database\Types\Type;
-use TCG\Voyager\Events\BreadAdded;
-use TCG\Voyager\Events\BreadDeleted;
-use TCG\Voyager\Events\BreadUpdated;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\DataRow;
-use TCG\Voyager\Models\DataType;
-use TCG\Voyager\Models\Permission;
+use SertxuDeveloper\Voyager\Database\Schema\Column;
+use SertxuDeveloper\Voyager\Database\Schema\SchemaManager;
+use SertxuDeveloper\Voyager\Database\Schema\Table;
+use SertxuDeveloper\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Events\BreadAdded;
+use SertxuDeveloper\Voyager\Events\BreadDeleted;
+use SertxuDeveloper\Voyager\Events\BreadUpdated;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Models\DataRow;
+use SertxuDeveloper\Voyager\Models\DataType;
+use SertxuDeveloper\Voyager\Models\Permission;
 
 class VoyagerBreadController extends Controller
 {
@@ -136,7 +136,7 @@ class VoyagerBreadController extends Controller
     {
         Voyager::canOrFail('browse_bread');
 
-        /* @var \TCG\Voyager\Models\DataType $dataType */
+        /* @var \SertxuDeveloper\Voyager\Models\DataType $dataType */
         try {
             $dataType = Voyager::model('DataType')->find($id);
 
@@ -173,7 +173,7 @@ class VoyagerBreadController extends Controller
     {
         Voyager::canOrFail('browse_bread');
 
-        /* @var \TCG\Voyager\Models\DataType $dataType */
+        /* @var \SertxuDeveloper\Voyager\Models\DataType $dataType */
         $dataType = Voyager::model('DataType')->find($id);
 
         // Delete Translations, if present
