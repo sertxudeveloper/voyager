@@ -4,19 +4,21 @@ namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use SertxuDeveloper\Voyager\Traits\HasRelationships;
 use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Page extends Model
 {
-    use Translatable;
+    use Translatable,
+        HasRelationships;
 
-    protected $translatable = ['title', 'body'];
+    protected $translatable = ['title', 'slug', 'body'];
 
     /**
      * Statuses.
      */
-    const STATUS_ACTIVE = 'Activa';
-    const STATUS_INACTIVE = 'Inactiva';
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_INACTIVE = 'INACTIVE';
 
     /**
      * List of statuses.

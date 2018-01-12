@@ -5,11 +5,13 @@ namespace SertxuDeveloper\Voyager\Models;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use SertxuDeveloper\Voyager\Contracts\User as UserContract;
+use SertxuDeveloper\Voyager\Traits\HasRelationships;
 use SertxuDeveloper\Voyager\Traits\VoyagerUser;
 
 class User extends Authenticatable implements UserContract
 {
-    use VoyagerUser;
+    use VoyagerUser,
+        HasRelationships;
 
     protected $guarded = [];
 

@@ -4,13 +4,15 @@ namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Traits\HasRelationships;
 use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Category extends Model
 {
-    use Translatable;
+    use Translatable,
+        HasRelationships;
 
-    protected $translatable = ['name'];
+    protected $translatable = ['slug', 'name'];
 
     protected $table = 'categories';
 

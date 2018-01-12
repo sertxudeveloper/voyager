@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Traits\HasRelationships;
 use SertxuDeveloper\Voyager\Traits\Resizable;
 use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Post extends Model
 {
-    use Translatable;
-    use Resizable;
+    use Translatable,
+        Resizable,
+        HasRelationships;
 
     protected $translatable = ['title', 'seo_title', 'excerpt', 'body', 'slug', 'meta_description', 'meta_keywords'];
 

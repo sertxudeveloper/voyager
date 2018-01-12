@@ -5,7 +5,7 @@ namespace SertxuDeveloper\Voyager\Http\Controllers;
 use Illuminate\Http\Request;
 use SertxuDeveloper\Voyager\Facades\Voyager;
 
-class VoyagerRoleController extends VoyagerBaseController
+class VoyagerRoleController extends VoyagerBreadController
 {
     // POST BR(E)AD
     public function update(Request $request, $id)
