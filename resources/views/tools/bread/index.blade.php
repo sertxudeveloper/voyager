@@ -32,8 +32,6 @@
                                    data-name="{{ $table->name }}" class="desctable">
                                    {{ $table->name }}
                                 </a>
-                                <i class="voyager-data"
-                                   style="font-size:25px; position:absolute; margin-left:10px; margin-top:-3px;"></i>
                             </p>
                         </td>
 
