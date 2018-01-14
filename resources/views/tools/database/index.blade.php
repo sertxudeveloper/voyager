@@ -21,11 +21,12 @@
                     <thead>
                         <tr>
                             <th>{{ __('voyager.database.table_name') }}</th>
+                            <th>{{ __('voyager.database.bread_crud_actions') }}</th>
                             <th style="text-align:right">{{ __('voyager.database.table_actions') }}</th>
                         </tr>
                     </thead>
 
-                @foreach($tables as $table)
+            @foreach($tables as $table)
                     @continue(in_array($table->name, config('voyager.database.tables.hidden', [])))
                     <tr>
                         <td>
@@ -34,8 +35,37 @@
                                    data-name="{{ $table->name }}" class="desctable">
                                    {{ $table->name }}
                                 </a>
+                            @if($table->dataTypeId)
+                                <i class="voyager-bread"
+                                   style="font-size:25px; position:absolute; margin-left:10px; margin-top:-3px;"></i>
+                            @endif
                             </p>
                         </td>
+
+                        <td>
+                            <div class="bread_actions">
+                            @if($table->dataTypeId)
+                                <a href="{{ route('voyager.' . $table->slug . '.index') }}"
+                                   class="btn-sm btn-warning browse_bread">
+                                    <i class="voyager-plus"></i> {{ __('voyager.database.browse_bread') }}
+                                </a>
+                                <a href="{{ route('voyager.database.bread.edit', $table->name) }}"
+                                   class="btn-sm btn-default edit">
+                                   {{ __('voyager.database.edit_bread') }}
+                                </a>
+                                <div data-id="{{ $table->dataTypeId }}" data-name="{{ $table->name }}"
+                                     class="btn-sm btn-danger delete" style="display:inline">
+                                     {{ __('voyager.database.delete_bread') }}
+                                </div>
+                            @else
+                                <a href="{{ route('voyager.database.bread.create', ['name' => $table->name]) }}"
+                                   class="btn-sm btn-default">
+                                    <i class="voyager-plus"></i> {{ __('voyager.database.add_bread') }}
+                                </a>
+                            @endif
+                            </div>
+                        </td>
+
                         <td class="actions">
                             <a class="btn btn-danger btn-sm pull-right delete_table @if($table->dataTypeId) remove-bread-warning @endif"
                                data-table="{{ $table->name }}" style="display:inline; cursor:pointer;">
@@ -58,13 +88,33 @@
         </div>
     </div>
 
+    <div class="modal modal-danger fade" tabindex="-1" id="delete_builder_modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('voyager.generic.close') }}"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><i class="voyager-trash"></i>  {!! __('voyager.database.delete_table_bread_quest', ['table' => '<span id="delete_builder_name"></span>']) !!}</h4>
+                </div>
+                <div class="modal-footer">
+                    <form action="{{ route('voyager.database.bread.delete', ['id' => null]) }}" id="delete_builder_form" method="POST">
+                        {{ method_field('DELETE') }}
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="submit" class="btn btn-danger" value="{{ __('voyager.database.delete_table_bread_conf') }}">
+                    </form>
+                    <button type="button" class="btn btn-outline pull-right" data-dismiss="modal">{{ __('voyager.generic.cancel') }}</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <div class="modal modal-danger fade" tabindex="-1" id="delete_modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('voyager.generic.close') }}"><span
                                 aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title"><i class="voyager-trash"></i> {!! __('voyager.database.delete_table_question', ['table' => '<span id="delete_table_name"></span>']) !!}</h4>
+                    <h4 class="modal-title"><i class="voyager-trash"></i> {!! __('voyager.database.delete_table_bread_quest', ['table' => '<span id="delete_table_name"></span>']) !!}</h4>
                 </div>
                 <div class="modal-footer">
                     <form action="{{ route('voyager.database.destroy', ['database' => '__database']) }}" id="delete_table_form" method="POST">
@@ -140,8 +190,15 @@
 
         $(function () {
 
-            // Setup Show Table Info
-            //
+            $('.bread_actions').on('click', '.delete', function (e) {
+                id = $(this).data('id');
+                name = $(this).data('name');
+
+                $('#delete_builder_name').text(name);
+                $('#delete_builder_form')[0].action += '/' + id;
+                $('#delete_builder_modal').modal('show');
+            });
+
             $('.database-tables').on('click', '.desctable', function (e) {
                 e.preventDefault();
                 href = $(this).attr('href');
@@ -162,8 +219,6 @@
                 });
             });
 
-            // Setup Delete Table
-            //
             $('td.actions').on('click', '.delete_table', function (e) {
                 table = $(this).data('table');
                 if ($(this).hasClass('remove-bread-warning')) {
@@ -174,6 +229,7 @@
                     $('#delete_modal').modal('show');
                 }
             });
+
         });
     </script>
 

@@ -12,7 +12,6 @@ class PermissionsTableSeeder extends Seeder
     {
         $keys = [
             'browse_admin',
-            'browse_bread',
             'browse_database',
             'browse_media',
             'browse_compass',

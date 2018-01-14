@@ -73,8 +73,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Foo Bar Post',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');
@@ -135,8 +133,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Foo Bar Post',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');
@@ -208,8 +204,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Title',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');

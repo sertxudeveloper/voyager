@@ -25,8 +25,6 @@ class CategoryTest extends TestCase
         $category->fill([
             'name' => 'Test Title',
             'slug' => 'test-slug',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         // Act

@@ -10,13 +10,13 @@ class Page extends Model
 {
     use Translatable;
 
-    protected $translatable = ['title', 'body'];
+    protected $translatable = ['title', 'slug', 'body'];
 
     /**
      * Statuses.
      */
-    const STATUS_ACTIVE = 'Activa';
-    const STATUS_INACTIVE = 'Inactiva';
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_INACTIVE = 'INACTIVE';
 
     /**
      * List of statuses.
