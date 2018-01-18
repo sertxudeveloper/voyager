@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Listeners;
+namespace SertxuDeveloper\Voyager\Listeners;
 
-use TCG\Voyager\Events\BreadAdded;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\Permission;
-use TCG\Voyager\Models\Role;
+use SertxuDeveloper\Voyager\Events\BreadAdded;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Models\Permission;
+use SertxuDeveloper\Voyager\Models\Role;
 
 class AddBreadPermission
 {

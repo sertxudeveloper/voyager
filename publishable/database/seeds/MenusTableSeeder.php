@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Menu;
+use SertxuDeveloper\Voyager\Models\Menu;
 
 class MenusTableSeeder extends Seeder
 {

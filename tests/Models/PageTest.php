@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Illuminate\Support\Facades\Auth;
-use TCG\Voyager\Models\Page;
+use SertxuDeveloper\Voyager\Models\Page;
 
 class PageTest extends TestCase
 {
@@ -27,8 +27,8 @@ class PageTest extends TestCase
             'title'            => 'Test Title',
             'excerpt'          => 'Test Excerpt',
             'body'             => 'Test Body',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
+            'meta_description' => 'Test Description',
+            'meta_keywords'    => 'Test Meta Keywords',
         ]);
 
         // Act
@@ -40,6 +40,8 @@ class PageTest extends TestCase
         $this->assertEquals('Test Title', $page->title);
         $this->assertEquals('Test Excerpt', $page->excerpt);
         $this->assertEquals('Test Body', $page->body);
+        $this->assertEquals('Test Description', $page->meta_description);
+        $this->assertEquals('Test Meta Keywords', $page->meta_keywords);
     }
 
     /** @test */
@@ -52,6 +54,8 @@ class PageTest extends TestCase
             'title'            => 'Test Title',
             'excerpt'          => 'Test Excerpt',
             'body'             => 'Test Body',
+            'meta_description' => 'Test Description',
+            'meta_keywords'    => 'Test Meta Keywords',
         ];
 
         $inactive = (new Page($data + ['slug' => str_random(8), 'status' => Page::STATUS_INACTIVE]));

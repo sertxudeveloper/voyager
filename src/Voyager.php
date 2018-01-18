@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager;
+namespace SertxuDeveloper\Voyager;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -8,21 +8,21 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
-use TCG\Voyager\Events\AlertsCollection;
-use TCG\Voyager\FormFields\After\HandlerInterface as AfterHandlerInterface;
-use TCG\Voyager\FormFields\HandlerInterface;
-use TCG\Voyager\Models\Category;
-use TCG\Voyager\Models\DataRow;
-use TCG\Voyager\Models\DataType;
-use TCG\Voyager\Models\Menu;
-use TCG\Voyager\Models\MenuItem;
-use TCG\Voyager\Models\Page;
-use TCG\Voyager\Models\Permission;
-use TCG\Voyager\Models\Post;
-use TCG\Voyager\Models\Role;
-use TCG\Voyager\Models\Setting;
-use TCG\Voyager\Models\User;
-use TCG\Voyager\Traits\Translatable;
+use SertxuDeveloper\Voyager\Events\AlertsCollection;
+use SertxuDeveloper\Voyager\FormFields\After\HandlerInterface as AfterHandlerInterface;
+use SertxuDeveloper\Voyager\FormFields\HandlerInterface;
+use SertxuDeveloper\Voyager\Models\Category;
+use SertxuDeveloper\Voyager\Models\DataRow;
+use SertxuDeveloper\Voyager\Models\DataType;
+use SertxuDeveloper\Voyager\Models\Menu;
+use SertxuDeveloper\Voyager\Models\MenuItem;
+use SertxuDeveloper\Voyager\Models\Page;
+use SertxuDeveloper\Voyager\Models\Permission;
+use SertxuDeveloper\Voyager\Models\Post;
+use SertxuDeveloper\Voyager\Models\Role;
+use SertxuDeveloper\Voyager\Models\Setting;
+use SertxuDeveloper\Voyager\Models\User;
+use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Voyager
 {
@@ -190,7 +190,6 @@ class Voyager
         require __DIR__.'/../routes/voyager.php';
     }
 
-    /** @deprecated */
     public function can($permission)
     {
         $this->loadPermissions();
@@ -211,7 +210,6 @@ class Voyager
         return true;
     }
 
-    /** @deprecated */
     public function canOrFail($permission)
     {
         if (!$this->can($permission)) {
@@ -221,7 +219,6 @@ class Voyager
         return true;
     }
 
-    /** @deprecated */
     public function canOrAbort($permission, $statusCode = 403)
     {
         if (!$this->can($permission)) {
@@ -266,7 +263,7 @@ class Voyager
 
             // Loop through all the packages and get the version of voyager
             foreach ($file->packages as $package) {
-                if ($package->name == 'tcg/voyager') {
+                if ($package->name == 'sertxudeveloper/voyager') {
                     $this->version = $package->version;
                     break;
                 }
@@ -302,7 +299,6 @@ class Voyager
         return in_array(Translatable::class, $traits);
     }
 
-    /** @deprecated */
     protected function loadPermissions()
     {
         if (!$this->permissionsLoaded) {

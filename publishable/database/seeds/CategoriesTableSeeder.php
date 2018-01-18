@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Category;
+use SertxuDeveloper\Voyager\Models\Category;
 
 class CategoriesTableSeeder extends Seeder
 {

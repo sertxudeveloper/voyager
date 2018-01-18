@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Permission;
+use SertxuDeveloper\Voyager\Models\Permission;
 
 class PermissionsTableSeeder extends Seeder
 {
@@ -12,7 +12,6 @@ class PermissionsTableSeeder extends Seeder
     {
         $keys = [
             'browse_admin',
-            'browse_bread',
             'browse_database',
             'browse_media',
             'browse_compass',

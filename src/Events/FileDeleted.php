@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Events;
+namespace SertxuDeveloper\Voyager\Events;
 
 class FileDeleted
 {

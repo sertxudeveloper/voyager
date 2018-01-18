@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Tests\Models;
+namespace SertxuDeveloper\Voyager\Tests\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Illuminate\Support\Facades\Auth;
 

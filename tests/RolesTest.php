@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use TCG\Voyager\Models\Role;
+use SertxuDeveloper\Voyager\Models\Role;
 
 class RolesTest extends TestCase
 {

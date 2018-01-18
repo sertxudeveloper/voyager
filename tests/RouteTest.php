@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 class RouteTest extends TestCase
 {
@@ -56,7 +56,7 @@ class RouteTest extends TestCase
             route('voyager.menus.show', ['menu' => 1]),
             route('voyager.menus.edit', ['menu' => 1]),
             route('voyager.database.index'),
-            route('voyager.bread.edit', ['table' => 'categories']),
+            route('voyager.database.bread.edit', ['table' => 'categories']),
             route('voyager.database.edit', ['table' => 'categories']),
             route('voyager.database.create'),
         ];

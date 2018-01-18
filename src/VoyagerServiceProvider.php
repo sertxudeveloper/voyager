@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager;
+namespace SertxuDeveloper\Voyager;
 
 use Arrilot\Widgets\Facade as Widget;
 use Arrilot\Widgets\ServiceProvider as WidgetServiceProvider;
@@ -15,17 +15,17 @@ use Illuminate\Support\Facades\View;
 use Intervention\Image\ImageServiceProvider;
 use Larapack\DoctrineSupport\DoctrineSupportServiceProvider;
 use Larapack\VoyagerHooks\VoyagerHooksServiceProvider;
-use TCG\Voyager\Events\FormFieldsRegistered;
-use TCG\Voyager\Facades\Voyager as VoyagerFacade;
-use TCG\Voyager\FormFields\After\DescriptionHandler;
-use TCG\Voyager\Http\Middleware\VoyagerAdminMiddleware;
-use TCG\Voyager\Models\MenuItem;
-use TCG\Voyager\Models\Setting;
-use TCG\Voyager\Policies\BasePolicy;
-use TCG\Voyager\Policies\MenuItemPolicy;
-use TCG\Voyager\Policies\SettingPolicy;
-use TCG\Voyager\Providers\VoyagerEventServiceProvider;
-use TCG\Voyager\Translator\Collection as TranslatorCollection;
+use SertxuDeveloper\Voyager\Events\FormFieldsRegistered;
+use SertxuDeveloper\Voyager\Facades\Voyager as VoyagerFacade;
+use SertxuDeveloper\Voyager\FormFields\After\DescriptionHandler;
+use SertxuDeveloper\Voyager\Http\Middleware\VoyagerAdminMiddleware;
+use SertxuDeveloper\Voyager\Models\MenuItem;
+use SertxuDeveloper\Voyager\Models\Setting;
+use SertxuDeveloper\Voyager\Policies\BasePolicy;
+use SertxuDeveloper\Voyager\Policies\MenuItemPolicy;
+use SertxuDeveloper\Voyager\Policies\SettingPolicy;
+use SertxuDeveloper\Voyager\Providers\VoyagerEventServiceProvider;
+use SertxuDeveloper\Voyager\Translator\Collection as TranslatorCollection;
 
 class VoyagerServiceProvider extends ServiceProvider
 {
@@ -192,7 +192,7 @@ class VoyagerServiceProvider extends ServiceProvider
         $components = ['title', 'text', 'button'];
 
         foreach ($components as $component) {
-            $class = 'TCG\\Voyager\\Alert\\Components\\'.ucfirst(camel_case($component)).'Component';
+            $class = 'SertxuDeveloper\\Voyager\\Alert\\Components\\'.ucfirst(camel_case($component)).'Component';
 
             $this->app->bind("voyager.alert.components.{$component}", $class);
         }
@@ -216,7 +216,7 @@ class VoyagerServiceProvider extends ServiceProvider
      */
     protected function registerWidgets()
     {
-        $default_widgets = ['TCG\\Voyager\\Widgets\\UserDimmer', 'TCG\\Voyager\\Widgets\\PostDimmer', 'TCG\\Voyager\\Widgets\\PageDimmer'];
+        $default_widgets = ['SertxuDeveloper\\Voyager\\Widgets\\UserDimmer', 'SertxuDeveloper\\Voyager\\Widgets\\PostDimmer', 'SertxuDeveloper\\Voyager\\Widgets\\PageDimmer'];
         $widgets = config('voyager.dashboard.widgets', $default_widgets);
 
         foreach ($widgets as $widget) {
@@ -318,7 +318,7 @@ class VoyagerServiceProvider extends ServiceProvider
         foreach ($formFields as $formField) {
             $class = studly_case("{$formField}_handler");
 
-            VoyagerFacade::addFormField("TCG\\Voyager\\FormFields\\{$class}");
+            VoyagerFacade::addFormField("SertxuDeveloper\\Voyager\\FormFields\\{$class}");
         }
 
         VoyagerFacade::addAfterFormField(DescriptionHandler::class);

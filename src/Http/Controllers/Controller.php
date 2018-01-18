@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Http\Controllers;
+namespace SertxuDeveloper\Voyager\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Constraint;
 use Intervention\Image\Facades\Image;
-use TCG\Voyager\Events\FileDeleted;
-use TCG\Voyager\Traits\AlertsMessages;
+use SertxuDeveloper\Voyager\Events\FileDeleted;
+use SertxuDeveloper\Voyager\Traits\AlertsMessages;
 use Validator;
 
 abstract class Controller extends BaseController

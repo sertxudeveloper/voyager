@@ -1,8 +1,8 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
-use TCG\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Facades\Voyager;
 
 class ViewEventTest extends TestCase
 {

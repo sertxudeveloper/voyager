@@ -27,7 +27,7 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+        'namespace' => 'SertxuDeveloper\\Voyager\\Http\\Controllers',
     ],
 
     /*
@@ -97,6 +97,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | The prefix you wish to use with your voyager installation
+    |--------------------------------------------------------------------------
+    |
+    | specify the domain prefix you would like your users to visit in order
+    | to view the Voyager admin panel
+    |
+    */
+
+    'prefix' => 'admin',
+
+    /*
+    |--------------------------------------------------------------------------
     | Multilingual configuration
     |--------------------------------------------------------------------------
     |
@@ -154,9 +166,9 @@ return [
         ],
 
         'widgets' => [
-            'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
-            'TCG\\Voyager\\Widgets\\PageDimmer',
+            'SertxuDeveloper\\Voyager\\Widgets\\UserDimmer',
+            'SertxuDeveloper\\Voyager\\Widgets\\PostDimmer',
+            'SertxuDeveloper\\Voyager\\Widgets\\PageDimmer',
         ],
 
     ],

@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Listeners;
+namespace SertxuDeveloper\Voyager\Listeners;
 
-use TCG\Voyager\Events\BreadAdded;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\Menu;
-use TCG\Voyager\Models\MenuItem;
+use SertxuDeveloper\Voyager\Events\BreadAdded;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Models\Menu;
+use SertxuDeveloper\Voyager\Models\MenuItem;
 
 class AddBreadMenuItem
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Traits\Translatable;
-use TCG\Voyager\Translator;
-use TCG\Voyager\Translator\Collection;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Traits\Translatable;
+use SertxuDeveloper\Voyager\Translator;
+use SertxuDeveloper\Voyager\Translator\Collection;
 
 class MultilingualTest extends TestCase
 {
@@ -73,8 +73,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Foo Bar Post',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');
@@ -135,8 +133,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Foo Bar Post',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');
@@ -208,8 +204,6 @@ class MultilingualTest extends TestCase
             'foreign_key' => 1,
             'locale'      => 'da',
             'value'       => 'Title',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         $model = TranslatableModel::first()->translate('da');

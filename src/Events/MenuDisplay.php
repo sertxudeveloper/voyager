@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Events;
+namespace SertxuDeveloper\Voyager\Events;
 
 use Illuminate\Queue\SerializesModels;
-use TCG\Voyager\Models\Menu;
+use SertxuDeveloper\Voyager\Models\Menu;
 
 class MenuDisplay
 {

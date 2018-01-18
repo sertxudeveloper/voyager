@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Database\Platforms;
+namespace SertxuDeveloper\Voyager\Database\Platforms;
 
 use Illuminate\Support\Collection;
-use TCG\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Database\Types\Type;
 
 abstract class Mysql extends Platform
 {

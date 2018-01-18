@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Database\Types\Common;
+namespace SertxuDeveloper\Voyager\Database\Types\Common;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use TCG\Voyager\Database\Types\Type;
+use SertxuDeveloper\Voyager\Database\Types\Type;
 
 class CharType extends Type
 {

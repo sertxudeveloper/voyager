@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\FormFields;
+namespace SertxuDeveloper\Voyager\FormFields;
 
 class PasswordHandler extends AbstractHandler
 {

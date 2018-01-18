@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Http\Controllers;
+namespace SertxuDeveloper\Voyager\Http\Controllers;
 
 use Illuminate\Http\Request;
-use TCG\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Facades\Voyager;
 
-class VoyagerRoleController extends VoyagerBaseController
+class VoyagerRoleController extends VoyagerBreadController
 {
     // POST BR(E)AD
     public function update(Request $request, $id)

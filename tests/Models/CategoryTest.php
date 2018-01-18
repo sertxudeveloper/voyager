@@ -1,9 +1,9 @@
 <?php
 
-namespace TCG\Voyager\Tests;
+namespace SertxuDeveloper\Voyager\Tests;
 
 use Illuminate\Support\Facades\Auth;
-use TCG\Voyager\Models\Category;
+use SertxuDeveloper\Voyager\Models\Category;
 
 class CategoryTest extends TestCase
 {
@@ -25,8 +25,6 @@ class CategoryTest extends TestCase
         $category->fill([
             'name' => 'Test Title',
             'slug' => 'test-slug',
-            'created_at' => new \DateTime(),
-            'updated_at' => new \DateTime(),
         ]);
 
         // Act

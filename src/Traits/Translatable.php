@@ -1,11 +1,11 @@
 <?php
 
-namespace TCG\Voyager\Traits;
+namespace SertxuDeveloper\Voyager\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use TCG\Voyager\Models\Translation;
-use TCG\Voyager\Translator;
+use SertxuDeveloper\Voyager\Models\Translation;
+use SertxuDeveloper\Voyager\Translator;
 
 trait Translatable
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace SertxuDeveloper\Voyager\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Traits\Translatable;
+use SertxuDeveloper\Voyager\Facades\Voyager;
+use SertxuDeveloper\Voyager\Traits\Translatable;
 
 class Category extends Model
 {
     use Translatable;
 
-    protected $translatable = ['name'];
+    protected $translatable = ['slug', 'name'];
 
     protected $table = 'categories';
 
